@@ -11,3 +11,6 @@ Tambah data
 ### Pertemuan 9 - PSTS
 Hapus data dan Edit data
 -- minus gambar belum berhasil
+
+### Pertemuan 10
+- Perbaikan gambar
