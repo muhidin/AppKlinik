@@ -6,11 +6,13 @@ Membuat aplikasi klinik menggunakan Laravel 11 diajarkan di StudentDay Programmi
 
 ### Pertemuan 8
 Tambah data
--- minus foto
 
 ### Pertemuan 9 - PSTS
 Hapus data dan Edit data
--- minus gambar belum berhasil
 
 ### Pertemuan 10
 - Perbaikan gambar
+
+### Pertemuan 11 dan 12
+- CRUD Poli
+- Perbaikan tampilan
