@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/daftar" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('daftar*') ? 'active' : '' }}" href="/daftar" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-clipboard"></i>
                                 </span>

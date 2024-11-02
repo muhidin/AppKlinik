@@ -12,7 +12,7 @@ class PoliController extends Controller
      */
     public function index()
     {
-        $poli = \App\Models\Poli::orderBy('biaya', 'DESC')->paginate(10);
+        $poli = \App\Models\Poli::orderBy('nama', 'ASC')->paginate(10);
         $data['poli'] = $poli;
         return view('poli_index', $data);
     }
