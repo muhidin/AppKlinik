@@ -57,6 +57,7 @@ DB_PASSWORD=
 lanjutkan dengan perintah
 ```bash
 php artisan migrate --seed
+php artisan storage:link
 php artisan key:generate
 php artisan serve
 code .
