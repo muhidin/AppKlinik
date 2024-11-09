@@ -29,7 +29,7 @@ Hapus data dan Edit data
 - Search users
 - Search Poli
 - DOKTER
-- CUD Daftar
+- CRUD Daftar
 - Laporan
 
 ## Tutorial Menggunakan Aplikasi Klinik
@@ -40,9 +40,26 @@ git clone https://github.com/muhidin/AppKlinik.git
 cd AppKlinik
 composer install
 npm install
+```
+salin .env.example dan ubah namanya menjadi .env, jika menggunakan OS Linux bisa dengan perintah
+```bash
+cp .env.example .env
+```
+lalu sesuaikan isinya pada baris 22-27 menjadi
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=pst11_klinikapp
+DB_USERNAME=root
+DB_PASSWORD=
+```
+lanjutkan dengan perintah
+```bash
 php artisan migrate --seed
-code .
+php artisan key:generate
 php artisan serve
+code .
 ```
 Buka Visual Studio Code dan buka terminal berikan perintah
 
