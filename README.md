@@ -36,7 +36,7 @@ Hapus data dan Edit data
 ### Clone Repo
 
 ```bash
-git clone https://github.com/muhidins/AppKlinik.git
+git clone https://github.com/muhidin/AppKlinik.git
 cd AppKlinik
 composer install
 npm install
