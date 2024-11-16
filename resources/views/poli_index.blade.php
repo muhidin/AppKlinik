@@ -7,15 +7,21 @@
                     <div class="card-header">Form Poli</div>
                     <div class="card-body">
                         <div class="row mb-3 mt-3">
-                            <div class="col-md-6 h3">
+                            <div class="col-md-4 h3">
                                 Data Poli
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="text" name="q" placeholder="Cari Poli" value="{{ request('q') }}" aria-label="Search">
+                                    <button class="btn btn-outline-primary" type="submit">Cari</button>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
                                 <a href="/poli/create" class="btn btn-primary btn-sm float-end">Tambah Poli</a>
                             </div>
                         </div>
-                        <table class="table table-striped">
-                            <thead>
+                        <table class="table table-striped table-bordered">
+                            <thead class="table-dark">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>

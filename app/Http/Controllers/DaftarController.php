@@ -26,7 +26,9 @@ class DaftarController extends Controller
      */
     public function create()
     {
-        //
+        $data['listPasien'] = \App\Models\Pasien::orderBy('nama', 'asc')->get();
+        $data['listPoli'] = \App\Models\Poli::orderBy('nama', 'asc')->get();
+        return view('daftar_create', $data);
     }
 
     /**
@@ -34,7 +36,16 @@ class DaftarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $requestData = $request->validate([
+            'tanggal_daftar' => 'required',
+            'pasien_id' => 'required',
+            'poli_id' => 'required',
+            'keluhan' => 'required',
+        ]);
+        $daftar = new Daftar();
+        $daftar->fill($requestData);
+        $daftar->save();
+        return redirect('/daftar')->with('pesan', 'Data sudah disimpan');
     }
 
     /**
@@ -66,6 +77,7 @@ class DaftarController extends Controller
      */
     public function destroy(Daftar $daftar)
     {
-        //
+        $daftar->delete();
+        return redirect('/daftar')->with('pesan', 'Data sudah dihapus');
     }
 }

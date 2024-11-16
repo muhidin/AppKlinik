@@ -1,4 +1,4 @@
-@extends('layouts.app_modern')
+@extends('layouts.app_modern', ['title' => 'Data Pendaftaran Pasien'])
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -30,6 +30,7 @@
                                     <th>Tanggal Daftar</th>
                                     <th>Poli</th>
                                     <th>Keluhan</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,6 +43,19 @@
                                         <td>{{ $item->tanggal_daftar->format('d M Y') }}</td>
                                         <td>{{ $item->poli->nama }}</td>
                                         <td>{{ $item->keluhan }}</td>
+                                        <td>
+                                            <a href="/daftar/{{ $item->id }}" class="btn btn-info btn-sm ml-2">
+                                                Detail
+                                            </a>&nbsp;
+                                            <form action="/daftar/{{ $item->id }}" method="post" class="d-inline">
+                                                @csrf
+                                                @method('delete')
+                                                <button class="btn btn-danger btn-sm ml-2"
+                                                    onclick="return confirm('Yakin ingin menghapus data?')">
+                                                    Hapus
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
